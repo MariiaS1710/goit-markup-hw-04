@@ -125,13 +125,18 @@ ul{
     align-items: center;
 }
 /* Герой секція */
-.hero{
-    background: url(../img/hero.jpg), linear-gradient(#C4C4C4,#C4C4C4);
+.overlay{
+    background:linear-gradient(rgba(47, 48, 58, 0.4),rgba(47, 48, 58, 0.4)), url(../img/hero.jpg) ;
     padding-top: 200px;
     padding-bottom: 200px;
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+    max-width: 1600px;
+    min-height: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgba(47, 48, 58, 0.4);;
 }
 .hero-title{
     font-weight: 900;
@@ -189,6 +194,29 @@ ul{
 .features-item:not(:first-child){
     margin-left: 30px;
 }
+.features-item::before{
+    content:"";
+    display: block;
+    width: 270px;
+    height: 120px;
+    background-color: var(--bcg-button-portfolio);
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-bottom: 30px;
+}
+.icon-antenna::before{
+    background-image: url(../img/antenna.svg);
+}
+.icon-clock::before{
+    background-image: url(../img/clock.svg);
+}
+.icon-diagram::before{
+    background-image: url(../img/diagram.svg);
+}
+.icon-astronavt::before{
+    background-image: url(../img/astronaut.svg);
+}
+
 .features-title{
     font-weight: 700;
     font-size: 14px;
@@ -234,6 +262,9 @@ img{
 .our-team-section{
     padding: 94px 0;
     background-color: var(--bcg-button-portfolio);
+    max-width: 1600px;
+    margin-right: auto;
+    margin-left: auto;
 }
 .team-title{
     font-weight: 500;
@@ -278,6 +309,9 @@ img{
     width: 44px;
     height: 44px;
 }
+.social-icon{
+    fill:#AFB1B8;
+}
 .social-icon:hover{
    fill: var(--primary-white-color);
 }
@@ -285,6 +319,71 @@ img{
     background-color: var(--accent-color);
     border-radius: 50%;
 }
+/* Постійні клієнти секція */
+.clients-section{
+    padding: 94px 0;
+}
+.clients-list{
+    display: flex;
+}
+.clients-item{
+    display: flex;
+    width: 170px;
+    height: 92px;
+    border: 1px solid #AFB1B8;
+    border-radius: 4px;
+}
+.clients-item:hover{
+    border: 1px solid var(--accent-color);
+}
+.clients-item:not(:first-child){
+    margin-left: 30px;
+}
+.company-ya-co{
+    width: 41px;
+    height: 47px;
+    fill: #afb1b8;
+   }
+   .company-ya-co:hover,
+   .company-comp:hover,
+   .company-company2:hover,
+   .company-peters:hover,
+   .company-brand:hover,
+   .company-comp3:hover{
+    fill: var(--accent-color);
+   }
+   .company-comp{
+    width: 40px;
+    height: 52px;
+    fill: #afb1b8;
+   }
+   .company-company2{
+    width: 44px;
+    height: 41px;
+    fill: #afb1b8;
+   }
+   .company-peters{
+    width: 85px;
+    height: 40px;
+    fill: #afb1b8;
+   }
+   .company-brand{
+    width: 62px;
+    height: 45px;
+    fill: #afb1b8;
+   }
+   .company-comp3{
+    width: 93px;
+    height: 43px;
+    fill: #afb1b8;
+   }
+.link-clients{
+    display: flex;
+    margin: 0 auto;
+    align-items: center;
+}
+
+
 
 /* Підвал */
 .footer{
@@ -316,6 +415,59 @@ img{
     text-decoration: none;
     color: rgba(255, 255, 255, 0.6);
 }
+.footer-container{
+    display: flex;
+    align-items: baseline;
+}
+.footer-adress{
+    margin-right: 70px;
+}
+.footer-social{
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: var(--primary-white-color);
+    margin-bottom: 20px;
+}
+.list-social{
+    display: flex;
+}
+.social-item{
+    display: flex;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.1);;
+}
+.social-item:hover{
+    background-color: var(--accent-color);
+} 
+.social-item:not(:first-child){
+    margin-left: 10px;
+}
+.icon-inst{
+    background-image: url(../img/instagram-f.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.icon-twit {
+    background-image: url(../img/twitter-f.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.icon-fb {
+    background-image: url(../img/facebook-f.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.icon-link {
+    background-image: url(../img/linkedin-f.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
 
 /* Portfolio */
 .project-section{
@@ -358,7 +510,9 @@ img{
     margin-top:-30px;
     margin-left:-30px;
 }
-
+.list-item-portfolio:hover{
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+}
 .project-list-item{
     margin-top: 30px;
     margin-left: 30px;
