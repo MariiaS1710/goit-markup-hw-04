@@ -90,7 +90,7 @@ ul{
 .contact-wrap{
     margin-left: auto;
 }
-.phone-footer::before{
+/* .phone-footer::before{
     content: "";
     width: 10px;
     height: 16px;
@@ -99,14 +99,14 @@ ul{
     background-image: url(../img/smartphone.svg);
     display: inline-block;
    background-repeat: no-repeat;
-}
+} */
 .phone-footer{
     margin-left: 50px;
     color: var(--secondary-text-color);
     display: flex;
     align-items: center;
 }
-.mail-footer::before{
+/* .mail-footer::before{
    content:""; 
    width: 16px;
    height: 12px;
@@ -116,6 +116,10 @@ ul{
    display: inline-block;
    align-items: center;
    background-repeat: no-repeat;
+} */
+.envelope{
+    margin-right: 10px;
+    fill: #757575;
 }
 
 
@@ -262,7 +266,6 @@ img{
 .our-team-section{
     padding: 94px 0;
     background-color: var(--bcg-button-portfolio);
-    max-width: 1600px;
     margin-right: auto;
     margin-left: auto;
 }
@@ -308,16 +311,14 @@ img{
     justify-content: center;
     width: 44px;
     height: 44px;
+    border-radius: 50%;
+}
+.social-item-link:hover .social-icon,
+.social-item-link:focus .social-icon {
+    fill: var(--primary-white-color);
 }
 .social-icon{
     fill:#AFB1B8;
-}
-.social-icon:hover{
-   fill: var(--primary-white-color);
-}
-.social-item-link:hover{
-    background-color: var(--accent-color);
-    border-radius: 50%;
 }
 /* Постійні клієнти секція */
 .clients-section{
@@ -333,9 +334,9 @@ img{
     border: 1px solid #AFB1B8;
     border-radius: 4px;
 }
-.clients-item:hover{
+/* .clients-item:hover{
     border: 1px solid var(--accent-color);
-}
+} */
 .clients-item:not(:first-child){
     margin-left: 30px;
 }
@@ -344,14 +345,26 @@ img{
     height: 47px;
     fill: #afb1b8;
    }
-   .company-ya-co:hover,
-   .company-comp:hover,
-   .company-company2:hover,
-   .company-peters:hover,
-   .company-brand:hover,
-   .company-comp3:hover{
+   .link-clients:hover .company-ya-co,
+   .link-clients:focus .company-ya-co,
+   .link-clients:hover .company-comp,
+   .link-clients:focus .company-comp,
+   .link-clients:hover .company-company2,
+   .link-clients:focus .company-company2,
+   .link-clients:hover .company-peters,
+   .link-clients:focus .company-peters,
+   .link-clients:hover .company-brand,
+   .link-clients:focus .company-brand,
+   .link-clients:hover .company-comp3,
+   .link-clients:focus .company-comp3{
     fill: var(--accent-color);
-   }
+    }
+    .link-clients:hover .clients-item,
+    .link-clients:focus .clients-item{
+     background-color: var(--accent-color);
+     border:1px solid var(--accent-color);
+    }
+
    .company-comp{
     width: 40px;
     height: 52px;
@@ -379,7 +392,11 @@ img{
    }
 .link-clients{
     display: flex;
-    margin: 0 auto;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    border-radius: 4px;
+    justify-content: center;
     align-items: center;
 }
 
@@ -441,7 +458,8 @@ img{
     border-radius: 50%;
     background-color: rgba(255, 255, 255, 0.1);;
 }
-.social-item:hover{
+.link-social:hover .social-item,
+.link-social:focus .social-item{
     background-color: var(--accent-color);
 } 
 .social-item:not(:first-child){
@@ -451,6 +469,10 @@ img{
     background-image: url(../img/instagram-f.svg);
     background-repeat: no-repeat;
     background-position: center;
+    /* width: 20px;
+    height: 20px;
+    justify-content: center;
+    align-items: center; */
 }
 .icon-twit {
     background-image: url(../img/twitter-f.svg);
@@ -500,6 +522,7 @@ img{
     color: var(--primary-white-color);
     border-radius: 4px;
     border: solid var(--accent-color);
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 .project-list{
     display: flex;
@@ -510,7 +533,8 @@ img{
     margin-top:-30px;
     margin-left:-30px;
 }
-.list-item-portfolio:hover{
+.project-list-item:hover,
+.project-list-item:focus{
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 .project-list-item{
