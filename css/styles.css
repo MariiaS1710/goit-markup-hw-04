@@ -317,6 +317,11 @@ img{
 .social-item-link:focus .social-icon {
     fill: var(--primary-white-color);
 }
+.social-item:hover,
+.social-item:focus{
+    background-color: var(--accent-color);
+}
+
 .social-icon{
     fill:#AFB1B8;
 }
@@ -361,7 +366,6 @@ img{
     }
     .link-clients:hover .clients-item,
     .link-clients:focus .clients-item{
-     background-color: var(--accent-color);
      border:1px solid var(--accent-color);
     }
 
