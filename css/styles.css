@@ -326,7 +326,6 @@ background-color:var(--accent-color)
     display: flex;
     width: 170px;
     height: 92px;
-    border: 1px solid #AFB1B8;
     border-radius: 4px;
 }
 .clients-item:not(:first-child){
@@ -351,9 +350,9 @@ background-color:var(--accent-color)
    .link-clients:focus .company-comp3{
     fill: var(--accent-color);
     }
-    .clients-item:hover .link-clients,
-    .clients-item:focus .link-clients{
-     border:1px solid var(--accent-color);
+    .link-clients:hover,
+    .link-clients:focus{
+        border: 1px solid var(--accent-color);
     }
 
    .company-comp{
@@ -388,6 +387,7 @@ background-color:var(--accent-color)
     border-radius: 4px;
     justify-content: center;
     align-items: center;
+    border: 1px solid #AFB1B8;
 }
 
 
@@ -512,8 +512,12 @@ background-color:var(--accent-color)
     margin-top:-30px;
     margin-left:-30px;
 }
-.project-list-item:hover,
-.project-list-item:focus{
+.link-project-list{
+    display: block;
+    text-decoration: none;
+}
+.link-project-list:hover,
+.link-project-list:focus{
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 .project-list-item{
